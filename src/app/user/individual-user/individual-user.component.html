@@ -1,3 +1,16 @@
 <div *ngIf="user | async">
-  <p>{{(user | async) | json}}</p>
+  <!-- <p>{{(user | async) | json}}</p> -->
+  <h2>User</h2>
+
+  <div class="row">
+    <div class="col-12 col-lg-4">
+      <app-user-detail [user]="user | async"></app-user-detail>
+    </div>
+    <div class="col-12 col-lg-4">
+      <app-address [address]="(user | async).address"></app-address>
+    </div>
+    <div class="col-12 col-lg-4">
+      <app-company [company]="(user | async).company"></app-company>
+    </div>
+  </div>
 </div>
