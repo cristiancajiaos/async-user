@@ -1,11 +1,13 @@
+import { UserComponent } from './user.component';
+import { IndividualUserComponent } from './individual-user/individual-user.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserComponent } from './user.component';
 import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
+  { path: '', component: UserComponent},
   { path: 'users', component: UsersComponent},
-  { path: ':id', component: UserComponent },
+  { path: ':id', component: IndividualUserComponent },
   { path: '**', redirectTo: '1', pathMatch: 'full'}
 ];
 
