@@ -1,7 +1,7 @@
 <p>user/:id</p>
 
-<div *ngIf="id">
-  <p>ID: {{id}}</p>
+<div *ngIf="user | async">
+  <p>{{(user | async) | json}}</p>
 </div>
 
 
